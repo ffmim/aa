@@ -1,0 +1,28 @@
+<style>
+  body {
+    display: grid;
+    grid-template-areas: 
+      "header header"
+      "sidebar content"
+      "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    min-height: 100vh;
+  }
+
+  header { grid-area: header; }
+  .sidebar { grid-area: sidebar; }
+  article { grid-area: content; }
+  footer { grid-area: footer; }
+
+  /* Przykładowe style dla wizualizacji */
+  header, .sidebar, article, footer {
+    padding: 20px;
+    color: white;
+  }
+  header { background-color: #007bff; }
+  .sidebar { background-color: #6c757d; }
+  article { background-color: #28a745; }
+  footer { background-color: #343a40; }
+</style>

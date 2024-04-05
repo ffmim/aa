@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../dist/css/output.css">
+  <style>
+  body {
+    display: grid;
+    grid-template-areas: 
+      "header header"
+      "sidebar content"
+      "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    min-height: 100vh;
+  }
+  header { grid-area: header; }
+  .sidebar { grid-area: sidebar; }
+  article { grid-area: content; }
+  footer { grid-area: footer; }
+
+  header, .sidebar, footer {
+    padding: 20px;
+  }
+
+  article {
+        background-color: white;
+        color:black;
+   }
+
+  .sidebar { background-color: #6c757d; }
+  footer { background-color: #343a40; }
+  </style>
+  <title></title>
+</head>
+<body>
+  <header class="bg-blue-500 text-white p-4">
+    <h1 class="text-4xl font-bold">Ranking</h1>
+  </header>
+  <aside class="sidebar">
+    Menu boczne
+  </aside>
+  <article>
+    <table class="table-auto">
+      <caption>
+        Programming Languages Ranking
+      </caption>
+      <thead class="bg-gray-200">
+        <tr>
+          <th scope="col" class="px-4 py-2">Programming Language</th>
+          <th scope="col" class="px-4 py-2">Ratings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-white border-b">
+          <td class="px-4 py-2"><img src="https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/Python.png" alt="Python Logo"> Python</td>
+          <td class="px-4 py-2">15.63%</td>
+        </tr>
+        <tr class="bg-white border-b">
+          <td class="px-4 py-2"><img src="https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/C.png" alt="C Logo">C</td>
+          <td class="px-4 py-2">11.17%</td>
+        </tr>
+        <tr class="bg-white border-b">
+          <td class="px-4 py-2"><img src="https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/C__.png" alt="Cpp Logo">C++</td>
+          <td class="px-4 py-2">10.70%</td>
+        </tr>
+        <tr class="bg-white border-b">
+          <td class="px-4 py-2"><img src="https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/Java.png" alt="Java Logo">Java</td>
+          <td class="px-4 py-2">8.95%</td>
+        </tr>
+        <tr class="bg-white border-b">
+          <td class="px-4 py-2"><img src="https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/C_.png" alt="Csharp Logo">C#</td>
+          <td class="px-4 py-2">7.54%</td>
+        </tr>
+      </tbody>
+    </table>
+    <ol class="list-decimal list-inside bg-gray-100">
+      <li class="font-bold text-yellow-500 mb-2">Python</li>
+      <li class="font-bold text-blue-700 mb-2">C</li>
+      <li class="font-bold text-blue-500 mb-2">C++</li>
+      <li class="font-bold text-slate-400 mb-2">Java</li>
+      <li class="font-bold text-purple-500 mb-2">C#</li>
+    </ol><br>
+    <details class="bg-blue-100 p-2">
+      <summary>
+        <strong>Python</strong>
+      </summary>
+      <p>Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.</p>
+    </details><br>
+    <details class="bg-blue-100 p-2">
+      <summary>
+        <strong>C</strong>
+      </summary>
+      <p>C is a general-purpose computer programming language. It was created in the 1970s by Dennis Ritchie, and remains very widely used and influential. By design, C's features cleanly reflect the capabilities of the targeted CPUs. It has found lasting use in operating systems, device drivers, and protocol stacks, but its use in application software has been decreasing. C is commonly used on computer architectures that range from the largest supercomputers to the smallest microcontrollers and embedded systems.</p>
+    </details><br>
+    <details class="bg-blue-100 p-2">
+      <summary>
+        <strong>C++</strong>
+      </summary>
+      <p>C++ is a high-level, general-purpose programming language created by Danish computer scientist Bjarne Stroustrup. First released in 1985 as an extension of the C programming language, it has since expanded significantly over time; as of 1997, C++ has object-oriented, generic, and functional features, in addition to facilities for low-level memory manipulation for making things like microcomputers or to make operating systems like Linux or Windows. It is almost always implemented as a compiled language, and many vendors provide C++ compilers, including the Free Software Foundation, LLVM, Microsoft, Intel, Embarcadero, Oracle, and IBM.</p>
+    </details><br>
+    <details class="bg-blue-100 p-2">
+      <summary>
+        <strong>Java</strong>
+      </summary>
+      <p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let programmers write once, run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without the need to recompile. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to C and C++, but has fewer low-level facilities than either of them. The Java runtime provides dynamic capabilities that are typically not available in traditional compiled languages.</p>
+    </details><br>
+    <details class="bg-blue-100 p-2">
+      <summary>
+        <strong>C#</strong>
+      </summary>
+      <p>C# is a general-purpose high-level programming language supporting multiple paradigms. C# encompasses static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines.</p>
+    </details><br>
+    <form class="border p-4">
+      <h3>Formularz: ulubione języki programowania</h3><label for="name">Twoje imię:</label> <input type="text" id="name" name="name" required=""><br>
+      <label for="language">Ulubiony język programowania:</label> <select id="language" name="language">
+        <option value="Python">
+          Python
+        </option>
+        <option value="C">
+          C
+        </option>
+        <option value="C++">
+          C++
+        </option>
+        <option value="Java">
+          Java
+        </option>
+        <option value="C#">
+          C#
+        </option>
+      </select><br>
+      <fieldset>
+        <legend>Płeć:</legend> <input type="radio" id="male" name="gender" value="male"> <label for="male">Mężczyzna</label> <input type="radio" id="female" name="gender" value="female"> <label for="female">Kobieta</label>
+      </fieldset><button type="submit" class="bg-blue-500 text-white font-bold animate-ping">Submit</button>
+    </form><br>
+    <p>Tekst <mark>zaznaczony</mark> w paragrafie. Tekst z użyciem <strong>strong</strong> i <em>em</em></p><br>
+    <div class="max-w-md mt-5 p-4 border border-gray-200 shadow-lg rounded-lg">
+      <p class="text-center text-gray-800">Cień i obramowanie wokół tekstu.</p>
+    </div><br>
+    <h3>Flexbox columns</h3>
+    <div class="flex flex-col">
+      <div class="border flex-auto w-64">
+        Flex auto w-64 Dużo treści, aby zobaczyć, jak rozciąga się
+      </div>
+      <div class="border flex-auto w-32">
+        Flex auto w-32 Mniej treści, ale nadal zajmuje dostępną przestrzeń
+      </div>
+      <div class="border flex-none w-14">
+        Flex none w-14 Stała szerokość, nie rozciąga się
+      </div>
+    </div><br>
+    <h3>Flexbox rows</h3>
+    <div class="flex flex-row">
+      <div class="border flex-auto w-64">
+        Flex auto w-64 Rozciąga się, aby zająć dostępną przestrzeń
+      </div>
+      <div class="border flex-auto w-32">
+        Flex auto w-32 Również rozciąga się, dopasowując się do dostępnej przestrzeni
+      </div>
+      <div class="border flex-none w-14">
+        Flex none w-14 Zachowuje stałą szerokość
+      </div>
+    </div><br>
+    <label for="file">Top 5 Languages Percentage:</label> <progress id="file" value="53.99" max="100">53.99%</progress><br>
+    <br>
+    <img src="plang.png" alt="Programming Languages" usemap="#programmingLanguagesMap"> <map name="programmingLanguagesMap" id="programmingLanguagesMap">
+      <area shape="rect" coords="0,0,204,199" href="https://pl.wikipedia.org/wiki/C%2B%2B" alt="C++" target="_blank">
+      <area shape="rect" coords="205,0,409,199" href="https://pl.wikipedia.org/wiki/Python" alt="Python" target="_blank">
+      <area shape="rect" coords="0,200,204,398" href="https://pl.wikipedia.org/wiki/C_(j%C4%99zyk_programowania)" alt="C" target="_blank">
+      <area shape="rect" coords="205,200,409,398" href="https://pl.wikipedia.org/wiki/Java" alt="Java" target="_blank">
+    </map>
+  </article>
+  <footer>
+    <p>Stopka</p>
+  </footer>
+</body>
+</html>
